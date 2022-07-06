@@ -1,0 +1,17 @@
+﻿<Window x:Class="Flight_Ticket_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flight_Ticket_System"
+        mc:Ignorable="d"
+        Title="Flight Ticket System" Height="650" Width="950">
+    <Grid>
+        <Button Content="Add Airports" Margin="52,31,693,553"></Button>
+        <Button Content="Add Flights" Margin="311,31,434,553"></Button>
+        <Button Content="Book Flights" Margin="187,196,557,388"></Button>
+        <Button Content="See Flights" Margin="566,31,179,553"></Button>
+
+
+    </Grid>
+</Window>
