@@ -5,38 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Flight_Ticket_System"
         mc:Ignorable="d"
-        Title="Flight Ticket System" Height="650" Width="950">
-
-    <Window.DataContext>
-        <local:MainViewModel></local:MainViewModel>
-    </Window.DataContext>
-    <Border Background="#272537" CornerRadius="20">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <TextBlock Text="BookFlight.com" Height="50" Foreground="White" FontSize="14" Margin="20,0,0,0"></TextBlock>
-
-            <StackPanel Grid.Row="1">
-                <RadioButton Content="See Flights" Height="50" Foreground="White" FontSize="14" Style="{StaticResource MenuButtonTheme}" Command="{Binding FlightsCommand}" ></RadioButton>
-                <RadioButton Content="Book Flights" Height="50" Foreground="White" FontSize="14" Style="{StaticResource MenuButtonTheme}" ></RadioButton>
-                <RadioButton Content="Add Flights" Height="50" Foreground="White" FontSize="14" Style="{StaticResource MenuButtonTheme}" ></RadioButton>
-                <RadioButton Content="Add Airports" Height="50" Foreground="White" FontSize="14" Style="{StaticResource MenuButtonTheme}" ></RadioButton>
-
-
-            </StackPanel>
-            
-        </Grid>
-
-    </Border>
-
-    
-    
-    
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+    </Grid>
 </Window>

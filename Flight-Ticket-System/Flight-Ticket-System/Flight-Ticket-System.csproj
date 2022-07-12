@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{19C3F4DE-07EE-422C-AE85-EF832A9D97DE}</ProjectGuid>
+    <ProjectGuid>{8348BAF0-57BF-4C11-B116-CEEF6FE159EB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Flight_Ticket_System</RootNamespace>
     <AssemblyName>Flight-Ticket-System</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -55,35 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Flights.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ActionCommand.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Flights.xaml.cs">
-      <DependentUpon>Flights.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Coordinator.cs" />
-    <Compile Include="FlightsViewModel.cs" />
-    <Compile Include="MainViewModel.cs" />
+    <Compile Include="Exceptions\ReservationConflictException.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Theme\MenuButtonTheme.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Airport.cs" />
+    <Compile Include="Models\FlightID.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\ReservationBook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
