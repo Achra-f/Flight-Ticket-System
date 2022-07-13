@@ -43,7 +43,7 @@ namespace Flight_Ticket_System
 
             
 
-            IEnumerable<Reservation> reservations = airport.GetReservationsForUser("Morocco");
+            IEnumerable<Reservation> reservations = airport.GetAllReservations();
             base.OnStartup(e);
         }
     }

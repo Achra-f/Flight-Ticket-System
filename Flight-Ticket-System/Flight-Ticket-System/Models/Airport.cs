@@ -18,9 +18,9 @@ namespace Flight_Ticket_System.Models
             _reservationBook = new ReservationBook();
         }
 
-        public IEnumerable<Reservation> GetReservationsForUser(string name)
+        public IEnumerable<Reservation> GetAllReservations()
         {
-            return _reservationBook.GetReservationsForUser(name);
+            return _reservationBook.GetAllReservations();
         }
 
         public void MakeReservation(Reservation reservation)
