@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="20 10" MaxWidth="600">
-        <views:ReservationList></views:ReservationList>
+        <views:ReservationList DataContext="{Binding CurrentViewModel}"></views:ReservationList>
 
     </Grid>
 </Window>

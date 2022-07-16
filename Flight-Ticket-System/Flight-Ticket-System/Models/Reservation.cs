@@ -12,6 +12,7 @@ namespace Flight_Ticket_System.Models
         public string Name { get; }
         public DateTime DepartureTime { get; }
         public DateTime ArrivalTime { get; }
+
         public TimeSpan FlightDuration => ArrivalTime.Subtract(DepartureTime);
 
         public Reservation(FlightID flightID, string name, DateTime departureTime, DateTime arrivalTime)

@@ -20,16 +20,14 @@
                        Style="{StaticResource Header}"/>
             <Button Grid.Column="1"
                 Content="Make reservation" 
-                Margin="10 0 0 0">
+                Margin="10 0 0 0"
+                    Command="{Binding MakeReservationCommand}">
    
             </Button>
         </Grid>
 
-        <ListView Grid.Row="1" Margin="0 25 0 0">
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
+        <ListView Grid.Row="1" Margin="0 25 0 0" ItemsSource="{Binding Reservations}">
+
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
@@ -40,28 +38,28 @@
                     <GridViewColumn Header="Room ID">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="12"/>
+                                <TextBlock Text="{Binding FlightID}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Name">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="Messi" Padding="0 0 20 0"/>
+                                <TextBlock Text="{Binding Name}" Padding="0 0 20 0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Start">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="8/12/2022" Padding="0 0 20 0"/>
+                                <TextBlock Text="{Binding DepartureTime}" Padding="0 0 20 0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="End">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="17/12/2022" Padding="0 0 20 0"/>
+                                <TextBlock Text="{Binding ArrivalTime}" Padding="0 0 20 0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

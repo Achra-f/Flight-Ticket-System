@@ -1,5 +1,6 @@
 ﻿using Flight_Ticket_System.Exceptions;
 using Flight_Ticket_System.Models;
+using Flight_Ticket_System.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,6 +18,8 @@ namespace Flight_Ticket_System
     {
         protected override void OnStartup(StartupEventArgs e)
         {
+
+            /*testing models
             Airport airport = new Airport("Zaventem Airport");
             try
             {
@@ -44,6 +47,13 @@ namespace Flight_Ticket_System
             
 
             IEnumerable<Reservation> reservations = airport.GetAllReservations();
+            */
+
+            MainWindow = new MainWindow()
+            {
+                DataContext = new MainViewModel()
+            };
+            MainWindow.Show();
             base.OnStartup(e);
         }
     }
