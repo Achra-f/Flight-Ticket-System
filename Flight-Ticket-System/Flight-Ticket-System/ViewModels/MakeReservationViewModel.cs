@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Flight_Ticket_System.Commands;
+using Flight_Ticket_System.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -80,9 +82,9 @@ namespace Flight_Ticket_System.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeReservationViewModel()
+        public MakeReservationViewModel(Airport airport)
         {
-
+            SubmitCommand = new MakeReservationCommand( this,airport);
         }
     }
 }

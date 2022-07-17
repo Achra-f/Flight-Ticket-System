@@ -16,6 +16,12 @@ namespace Flight_Ticket_System
     /// </summary>
     public partial class App : Application
     {
+        private readonly Airport _airport;
+
+        public App()
+        {
+            _airport = new Airport("ZaventemBXL");
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
 
@@ -51,7 +57,7 @@ namespace Flight_Ticket_System
 
             MainWindow = new MainWindow()
             {
-                DataContext = new MainViewModel()
+                DataContext = new MainViewModel(_airport)
             };
             MainWindow.Show();
             base.OnStartup(e);
