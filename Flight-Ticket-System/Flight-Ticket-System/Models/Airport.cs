@@ -8,24 +8,35 @@ namespace Flight_Ticket_System.Models
 {
     public class Airport
     {
-        private readonly ReservationBook _reservationBook;
+        private readonly AirportsList _airportsList;
 
+        public int Id { get; }
         public string Name { get; }
+        public string Country { get; }
+        public string City { get; }
+        public string Code { get; }
 
-        public Airport(string name)
+        public Airport(int id, string name, string country, string city, string code)
         {
+
+            Id = id;
             Name = name;
-            _reservationBook = new ReservationBook();
+            Country = country;
+            City = city;
+            Code = code;
+            _airportsList = new AirportsList();
         }
 
-        public IEnumerable<Reservation> GetAllReservations()
+        public IEnumerable<Airports> GetAllAirports()
         {
-            return _reservationBook.GetAllReservations();
+            return _airportsList.GetAllAirports();
         }
 
-        public void MakeReservation(Reservation reservation)
+        public void CreateAirport(Airports airports)
         {
-            _reservationBook.AddReservations(reservation);
+            _airportsList.AddAirport(airports);
         }
+
+
     }
 }
